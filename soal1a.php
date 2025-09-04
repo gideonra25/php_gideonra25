@@ -41,4 +41,21 @@ if ($step === 2) {
 <?php
 }
 
+// step 3
+if ($step === 3) {
+    $data = $_POST['data'];
+    foreach ($data as $i => $row) {
+        foreach ($row as $j => $value) {
+            echo "$i.$j : " . htmlspecialchars($value) . "<br>";
+        }
+    }
+?>
+    <br>
+    <form method="post">
+        <input type="hidden" name="step" value="1">
+        <button type="submit">Kembali ke Step 1</button>
+    </form>
+<?php
+}
+
 ?>
